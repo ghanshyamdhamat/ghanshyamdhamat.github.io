@@ -1,0 +1,46 @@
+theme: jekyll-theme-minimal
+title: Ghanshyam Dhamat
+description: M.Tech Student in Computational and Data Science | Machine Learning Enthusiast
+url: "https://ghanshyamdhamat97.github.io"
+baseurl: ""
+
+# Author information
+author:
+  name: Ghanshyam Dhamat
+  email: ghanshyamdhamat97@gmail.com
+  github: ghanshyamdhamat97
+  linkedin: ghanshyamdhamat97
+
+# SEO settings
+lang: en
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Social media
+social:
+  - name: GitHub
+    url: https://github.com/ghanshyamdhamat97
+    icon: fab fa-github
+  - name: LinkedIn
+    url: https://linkedin.com/in/ghanshyamdhamat97
+    icon: fab fa-linkedin
+  - name: Email
+    url: mailto:ghanshyamdhamat97@gmail.com
+    icon: fas fa-envelope
+
+# Navigation
+navigation:
+  - name: About
+    url: "#about"
+  - name: Education
+    url: "#education"
+  - name: Experience
+    url: "#experience"
+  - name: Projects
+    url: "#projects"
+  - name: Research
+    url: "#research"
+  - name: Contact
+    url: "#contact"
