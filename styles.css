@@ -88,6 +88,24 @@ body {
     text-align: center;
 }
 
+.hero-image {
+    width: 120px;  /* Adjust width as needed (e.g., smaller than current 150px) */
+    height: 120px; /* Adjust height to match for circular shape */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        width: 100px;  /* Smaller on mobile */
+        height: 100px;
+    }
+}
+
+
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 700;
