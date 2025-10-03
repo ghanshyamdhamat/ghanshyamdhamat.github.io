@@ -41,49 +41,59 @@
                 <div id="krishi-sahayak" class="viz-section">
                     <h3>Krishi Sahayak Visualizations</h3>
                     <p>Interactive charts and images for the RAG-based advisor project.</p>
-                    <canvas id="krishiChart"></canvas>
+                    <!-- <canvas id="krishiChart"></canvas> -->
+                    <img src="assets/krishi_sahayak/image.png" alt="Queries" class="viz-img">
+                    <img src="assets/krishi_sahayak/image (1).png" alt="Queries" class="viz-img">
+                    <img src="assets/krishi_sahayak/image (2).png" alt="Queries" class="viz-img">
                 </div>
                 
                 <!-- Brain Tumor Section -->
-                <div id="brain-tumor" class="viz-section">
+                <!-- <div id="brain-tumor" class="viz-section">
                     <h3>Brain Tumor Segmentation Visualizations</h3>
                     <p>Segmentation results and performance metrics from BRATS 2020.</p>
                     <canvas id="brainTumorChart"></canvas>
-                </div>
+                </div> -->
                 
                 <!-- Leaf Disease Section -->
                 <div id="leaf-disease" class="viz-section">
                     <h3>Leaf Disease Model Performance</h3>
-                    <canvas id="leafDiseaseChart"></canvas>
+                    <!-- <canvas id="leafDiseaseChart"></canvas> -->
                     <div class="viz-images">
                         <img src="assets/leaf_disease/accuracy_cnn_svm.png" alt="Accuracy of CNN and SVM" class="viz-img">
                         <img src="assets/leaf_disease/image_at_diff_component.png" alt="Sample Image at Different PCA Components" class="viz-img">
                         <img src="assets/leaf_disease/variance_channel_wise.png" alt="Variance Channel Wise" class="viz-img">
                         <img src="assets/leaf_disease/variance_explained.png" alt="Variance Explained" class="viz-img">
                         <img src="assets/leaf_disease/mse.png" alt="Mean Squared Error" class="viz-img">
+                        <img src="assets/leaf_disease/performance_comparison.png" alt="Performance metrics" class="viz-img">
                     </div>
                 </div>
-                
+
                 <!-- NLP Translation Section -->
                 <div id="nlp-translation" class="viz-section">
                     <h3>NLP Machine Translation Visualizations</h3>
                     <p>Attention weights and BLEU/ROUGE scores.</p>
-                    <canvas id="nlpChart"></canvas>
+                    <!-- <canvas id="nlpChart"></canvas> -->
+                    <div class="viz-images">
+                        <img src="assets/nlp_attention/head_imp_cnn.png" alt="Attention Head Importance" class="viz-img">
+                        <img src="assets/nlp_attention/head_imp_wmt.png" alt="Attention Head Importance (WMT)" class="viz-img">
+                        <img src="assets/nlp_attention/prune_any.png" alt="Scores after Pruning" class="viz-img">
+                        <img src="assets/nlp_attention/prune_encoder_decoder_cross.png" alt="Selective Pruning" class="viz-img">
+                    </div>
+                    </div>
                 </div>
                 
-                <!-- NLP Classification Section -->
+                <!-- NLP Classification Section
                 <div id="nlp-classification" class="viz-section">
                     <h3>NLP Classification and Generation Visualizations</h3>
                     <p>Performance metrics for Naive Bayes, N-Gram, FNN & RNN models.</p>
                     <canvas id="nlpClassChart"></canvas>
-                </div>
-                
-                <!-- ML Algorithms Section -->
+                </div> -->
+                <!-- ML Algorithms Section
                 <div id="ml-algorithms" class="viz-section">
                     <h3>Machine Learning Algorithms Visualizations</h3>
                     <p>Performance of implemented ML algorithms and SVD compression.</p>
                     <canvas id="mlChart"></canvas>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -213,6 +223,44 @@
         //         });
         //     });
     </script>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        // Image modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const captionText = document.getElementById('caption');
+        const span = document.getElementsByClassName('close')[0];
+        
+        // Make all viz images clickable
+        document.querySelectorAll('.viz-img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
+        });
+        
+        // Close modal when clicking the X
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
