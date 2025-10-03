@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ghanshyam Dhamat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <h1 class="nav-logo"><a href="index.html">Ghanshyam Dhamat</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="data-viz.html">Data Viz</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <a href="data-viz.html#krishi-sahayak" class="project-link">
+                        <div class="project-card">
+                            <h3>Krishi Sahayak: An RAG based advisor to farmers</h3>
+                            <span class="project-date">Aug 2025</span>
+                            <p>Developed KrishiSahayak, a Retrieval-Augmented Generation (RAG) based AI advisor for farmers using FAISS vector database, Docling, Langraph, and LangChain to deliver context-aware agricultural recommendations. Built an interactive Streamlit application enabling farmers to query domain knowledge efficiently.</p>
+                            <div class="project-tags">
+                                <span class="tag">RAG</span>
+                                <span class="tag">FAISS</span>
+                                <span class="tag">LangChain</span>
+                                <span class="tag">Streamlit</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="data-viz.html#brain-tumor" class="project-link">
+                        <div class="project-card">
+                            <h3>Brain Tumor Segmentation Using Self-Ensembled 3D U-Net Architectures</h3>
+                            <span class="project-date">Mar 2025</span>
+                            <p>Performed brain tumor segmentation using 3D UNet architecture with an ensemble of 5-fold cross-validation models on BRATS 2020 dataset, utilizing SWA and TTA to improve segmentation results.</p>
+                            <div class="project-tags">
+                                <span class="tag">3D U-Net</span>
+                                <span class="tag">Brain Tumor</span>
+                                <span class="tag">BRATS 2020</span>
+                                <span class="tag">Ensemble</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="data-viz.html#leaf-disease" class="project-link">
+                        <div class="project-card">
+                            <h3>Classification and Segmentation on Leaf Disease Dataset</h3>
+                            <span class="project-date">Mar 2025</span>
+                            <p>Used SVM and ResNet-based model for classification and SegFormer for segmentation. Performed statistical analysis of results obtained.</p>
+                            <div class="project-images">
+                                <img src="assets/leaf_disease/accuracy_cnn_svm.png" alt="Accuracy of CNN and SVM" class="project-img">
+                                <img src="assets/leaf_disease/image_at_diff_component.png" alt="Sample Image at Different PCA Components" class="project-img">
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">SVM</span>
+                                <span class="tag">ResNet</span>
+                                <span class="tag">SegFormer</span>
+                                <span class="tag">Computer Vision</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="data-viz.html#nlp-translation" class="project-link">
+                        <div class="project-card">
+                            <h3>NLP Implementation: RNN with Attention for Machine Translation</h3>
+                            <span class="project-date">Mar 2025</span>
+                            <p>Implementation of RNN with attention for Machine Translation. Implemented Rouge-L and BLEU score metrics. Performed pruning after attention head importance analysis.</p>
+                            <div class="project-tags">
+                                <span class="tag">RNN</span>
+                                <span class="tag">Attention</span>
+                                <span class="tag">Machine Translation</span>
+                                <span class="tag">BLEU</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="data-viz.html#nlp-classification" class="project-link">
+                        <div class="project-card">
+                            <h3>NLP Implementation: Naive Bayes, N-Gram, FNN & RNN</h3>
+                            <span class="project-date">Feb 2025</span>
+                            <p>Implementation of Naive Bayes-based review classifier, N-Gram, FNN & RNN-based model implementation for name generation.</p>
+                            <div class="project-tags">
+                                <span class="tag">Naive Bayes</span>
+                                <span class="tag">N-Gram</span>
+                                <span class="tag">RNN</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="data-viz.html#ml-algorithms" class="project-link">
+                        <div class="project-card">
+                            <h3>ML and Optimization Algorithms, SVD-Based Image Compression, PageRank</h3>
+                            <span class="project-date">Dec 2024</span>
+                            <p>Implemented core ML algorithms (Linear Regression with Mini-Batch, SGD, NAG; PCA; K-Means; PageRank via Power Iteration) from scratch. Built an SVD-based image compression pipeline.</p>
+                            <div class="project-tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">SVD</span>
+                                <span class="tag">PageRank</span>
+                                <span class="tag">Optimization</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ghanshyam Dhamat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

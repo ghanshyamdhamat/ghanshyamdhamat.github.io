@@ -1,0 +1,5 @@
+{
+  "accuracy": [85, 90, 92],
+  "precision": [82, 88, 91],
+  "labels": ["SVM", "ResNet", "SegFormer"]
+}

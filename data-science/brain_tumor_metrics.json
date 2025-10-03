@@ -1,0 +1,4 @@
+{
+  "models": ["3D U-Net", "Ensemble"],
+  "dice": [0.85, 0.92]
+}

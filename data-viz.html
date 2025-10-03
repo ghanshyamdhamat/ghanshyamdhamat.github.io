@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Visualizations - Ghanshyam Dhamat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <h1 class="nav-logo"><a href="index.html">Ghanshyam Dhamat</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="data-viz.html">Data Viz</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="data-viz">
+            <div class="container">
+                <h2 class="section-title">Data Science Visualizations</h2>
+                
+                <!-- Krishi Sahayak Section -->
+                <div id="krishi-sahayak" class="viz-section">
+                    <h3>Krishi Sahayak Visualizations</h3>
+                    <p>Interactive charts and images for the RAG-based advisor project.</p>
+                    <canvas id="krishiChart"></canvas>
+                </div>
+                
+                <!-- Brain Tumor Section -->
+                <div id="brain-tumor" class="viz-section">
+                    <h3>Brain Tumor Segmentation Visualizations</h3>
+                    <p>Segmentation results and performance metrics from BRATS 2020.</p>
+                    <canvas id="brainTumorChart"></canvas>
+                </div>
+                
+                <!-- Leaf Disease Section -->
+                <div id="leaf-disease" class="viz-section">
+                    <h3>Leaf Disease Model Performance</h3>
+                    <canvas id="leafDiseaseChart"></canvas>
+                    <div class="viz-images">
+                        <img src="assets/leaf_disease/accuracy_cnn_svm.png" alt="Accuracy of CNN and SVM" class="viz-img">
+                        <img src="assets/leaf_disease/image_at_diff_component.png" alt="Sample Image at Different PCA Components" class="viz-img">
+                        <img src="assets/leaf_disease/variance_channel_wise.png" alt="Variance Channel Wise" class="viz-img">
+                        <img src="assets/leaf_disease/variance_explained.png" alt="Variance Explained" class="viz-img">
+                        <img src="assets/leaf_disease/mse.png" alt="Mean Squared Error" class="viz-img">
+                    </div>
+                </div>
+                
+                <!-- NLP Translation Section -->
+                <div id="nlp-translation" class="viz-section">
+                    <h3>NLP Machine Translation Visualizations</h3>
+                    <p>Attention weights and BLEU/ROUGE scores.</p>
+                    <canvas id="nlpChart"></canvas>
+                </div>
+                
+                <!-- NLP Classification Section -->
+                <div id="nlp-classification" class="viz-section">
+                    <h3>NLP Classification and Generation Visualizations</h3>
+                    <p>Performance metrics for Naive Bayes, N-Gram, FNN & RNN models.</p>
+                    <canvas id="nlpClassChart"></canvas>
+                </div>
+                
+                <!-- ML Algorithms Section -->
+                <div id="ml-algorithms" class="viz-section">
+                    <h3>Machine Learning Algorithms Visualizations</h3>
+                    <p>Performance of implemented ML algorithms and SVD compression.</p>
+                    <canvas id="mlChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ghanshyam Dhamat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Krishi Sahayak Chart
+        // fetch('data-science/krishi_metrics.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ctx = document.getElementById('krishiChart').getContext('2d');
+        //         new Chart(ctx, {
+        //             type: 'line',
+        //             data: {
+        //                 labels: data.queries,
+        //                 datasets: [{
+        //                     label: 'Response Time (s)',
+        //                     data: data.times,
+        //                     borderColor: '#10b981',
+        //                 }]
+        //             },
+        //             options: { responsive: true }
+        //         });
+        //     });
+
+        // // Brain Tumor Chart
+        // fetch('data-science/brain_tumor_metrics.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ctx = document.getElementById('brainTumorChart').getContext('2d');
+        //         new Chart(ctx, {
+        //             type: 'bar',
+        //             data: {
+        //                 labels: data.models,
+        //                 datasets: [{
+        //                     label: 'Dice Score',
+        //                     data: data.dice,
+        //                     backgroundColor: '#f59e0b',
+        //                 }]
+        //             },
+        //             options: { responsive: true }
+        //         });
+        //     });
+
+        // Leaf Disease Chart
+        // fetch('data-science/leaf_disease_metrics.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ctx = document.getElementById('leafDiseaseChart').getContext('2d');
+        //         new Chart(ctx, {
+        //             type: 'bar',
+        //             data: {
+        //                 labels: data.labels,
+        //                 datasets: [{
+        //                     label: 'Accuracy (%)',
+        //                     data: data.accuracy,
+        //                     backgroundColor: '#10b981',
+        //                 }, {
+        //                     label: 'Precision (%)',
+        //                     data: data.precision,
+        //                     backgroundColor: '#f59e0b',
+        //                 }]
+        //             },
+        //             options: { responsive: true, scales: { y: { beginAtZero: true } } }
+        //         });
+        //     });
+
+        // NLP Chart
+        // fetch('data-science/nlp_metrics.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ctx = document.getElementById('nlpChart').getContext('2d');
+        //         new Chart(ctx, {
+        //             type: 'radar',
+        //             data: {
+        //                 labels: ['BLEU', 'ROUGE-L', 'Precision', 'Recall'],
+        //                 datasets: [{
+        //                     label: 'Scores',
+        //                     data: [data.bleu, data.rouge, data.precision, data.recall],
+        //                     backgroundColor: 'rgba(37, 99, 235, 0.2)',
+        //                     borderColor: '#2563eb',
+        //                 }]
+        //             },
+        //             options: { responsive: true }
+        //         });
+        //     });
+
+        // NLP Classification Chart (placeholder)
+        // fetch('data-science/nlp_metrics.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ctx = document.getElementById('nlpClassChart').getContext('2d');
+        //         new Chart(ctx, {
+        //             type: 'doughnut',
+        //             data: {
+        //                 labels: ['BLEU', 'ROUGE-L'],
+        //                 datasets: [{
+        //                     data: [data.bleu, data.rouge],
+        //                     backgroundColor: ['#10b981', '#f59e0b'],
+        //                 }]
+        //             },
+        //             options: { responsive: true }
+        //         });
+        //     });
+
+        // ML Chart
+        // fetch('data-science/ml_metrics.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ctx = document.getElementById('mlChart').getContext('2d');
+        //         new Chart(ctx, {
+        //             type: 'line',
+        //             data: {
+        //                 labels: data.algorithms,
+        //                 datasets: [{
+        //                     label: 'Performance Score',
+        //                     data: data.scores,
+        //                     borderColor: '#2563eb',
+        //                 }]
+        //             },
+        //             options: { responsive: true }
+        //         });
+        //     });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

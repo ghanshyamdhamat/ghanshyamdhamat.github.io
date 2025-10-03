@@ -1,0 +1,4 @@
+{
+  "queries": ["Query1", "Query2", "Query3"],
+  "times": [1.2, 0.8, 1.5]
+}

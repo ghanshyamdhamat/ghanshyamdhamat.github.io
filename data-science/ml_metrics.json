@@ -1,0 +1,4 @@
+{
+  "algorithms": ["Linear Regression", "PCA", "K-Means", "PageRank"],
+  "scores": [0.85, 0.90, 0.75, 0.88]
+}
